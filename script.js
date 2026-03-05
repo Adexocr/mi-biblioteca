@@ -92,6 +92,10 @@ console.log("\n--- Intentar Duplicado ---");
 miBiblioteca.agregarLibro(
     new Libro("El código Da Vinci", "Dan Brown", "Thriller", 2003)
     );
+console.log("\n--- Intentar Duplicado  2 ---");
+miBiblioteca.agregarLibro(
+    new Libro("Los juegos del hambre", "Suzanne Collins", "Ciencia-Ficcion", 2008)
+    );
 
 console.log("\n--- Prestar libro---");
 try {
