@@ -60,3 +60,50 @@ class Biblioteca {
         console.log(`Libros prestados: ${prestados}`);
         }
 }
+
+// == Prueba de la biblioteca ==
+
+const miBiblioteca = new Biblioteca("Mi Biblioteca");
+
+console.log("Agregando libros...\n");
+miBiblioteca.agregarLibro(
+    new Libro("Cien años de soledad", "García Márquez", "Ficción", 1967)
+    );
+miBiblioteca.agregarLibro(
+    new Libro("El código Da Vinci", "Dan Brown", "Thriller", 2003)
+    );
+miBiblioteca.agregarLibro(
+    new Libro("Breve historia del tiempo", "Stephen Hawking", "Ciencia", 1988)
+    );
+miBiblioteca.agregarLibro(
+    new Libro("Los juegos del hambre", "Suzanne Collins", "Ciencia-Ficcion", 2008)
+    );
+miBiblioteca.agregarLibro(
+    new Libro("Un mundo feliz", "Aldous Huxley", "Novela Distopica", 1932)
+    );
+
+console.log("\n--- Intentar Duplicado ---");
+miBiblioteca.agregarLibro(
+    new Libro("El código Da Vinci", "Dan Brown", "Thriller", 2003)
+    );
+
+console.log("\n--- Prestar libro---");
+try {
+    miBiblioteca.prestar("Cien años de soledad");
+    console.log("Intentando prestar el mismo libro otra vez...");
+    miBiblioteca.prestar("Cien años de soledad");
+} catch (error) {
+    console.error("Error:", error.message);
+}
+
+console.log("\n--- Buscar por genero---");
+const librosDeciencia = miBiblioteca.buscarPorGenero("Ciencia");
+console.log("Libros de Ciencia:");
+librosDeciencia.forEach((libro) => console.log('  ° ${libro.info()}'));
+
+const librosDeFiccion = miBiblioteca.buscarPorGenero("Ficción");
+console.log("Libros de Ficción:");
+librosDeFiccion.forEach((libro) => console.log('  ° ${libro.info()}'));
+
+console.log("\n --- Estadisticas --- ");
+miBiblioteca.estadisticas();
