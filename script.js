@@ -109,11 +109,11 @@ try {
 console.log("\n--- Buscar por genero---");
 const librosDeciencia = miBiblioteca.buscarPorGenero("Ciencia");
 console.log("Libros de Ciencia:");
-librosDeciencia.forEach((libro) => console.log('  ° ${libro.info()}'));
+librosDeciencia.forEach((libro) => console.log('  ${libro.info()}'));
 
 const librosDeFiccion = miBiblioteca.buscarPorGenero("Ficción");
 console.log("Libros de Ficción:");
-librosDeFiccion.forEach((libro) => console.log('  ° ${libro.info()}'));
+librosDeFiccion.forEach((libro) => console.log('  ${libro.info()}'));
 
 console.log("\n --- Estadisticas --- ");
 miBiblioteca.estadisticas();
