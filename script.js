@@ -49,6 +49,12 @@ class Biblioteca {
         console.log(`Libro "${titulo}" prestado.`);
     }
 
+    buscarPorGenero(genero) {
+        return this.libros.filter(
+            (libro) => libro.genero === genero
+        );
+    }
+
     estadisticas() {
         const total = this.libros.length;
         const disponibles = this.libros.filter((l) => l.disponible).length;
