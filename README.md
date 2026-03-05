@@ -12,4 +12,4 @@ Cuenta con algunas funcionalidades como:
 
 *Ver estadisticas
 
-Se debe abrir el archivo INDEX.HTML y presionar F12
+Se debe abrir el archivo INDEX.HTML y presionar F12, despues ir a CONSOLA. Ahi estan todos los mensajes.
